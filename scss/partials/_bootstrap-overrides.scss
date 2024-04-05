@@ -1,0 +1,104 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// PER PRIMA COSA MODIFICA IL PERCORSO DEI FILE, NON SARA' NEL NOSTRO CASO RIFERITO AD UNA CARTELLA NODE_MODULES.
+// RIFERISCITI AL TUO PERCORSO LOCALE!
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+// @import "../node_modules/bootstrap/scss/functions"; // questo diventa...
+@import "../../bootstrap/scss/functions";
+// il path è riferito al punto in cui questo file è nella struttura di file/cartelle del nostro progetto
+// ../ serve a salire di un livello ogni volta che lo si usa
+
+// 2. Include any default variable overrides here
+$prefix: bshit-;
+$primary: rgb(0, 255, 251);
+$card-title-color: rgb(0, 70, 69);
+$card-color: rgb(0, 122, 120);
+$card-border-color: $primary;
+$spacer: 1.5rem;
+$grid-gutter-width: 0.25rem;
+
+$btn-padding-y: 1rem;
+$btn-padding-x: 2rem;
+$btn-border-radius: 0;
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "../../bootstrap/scss/variables";
+@import "../../bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+$additional-display-font-sizes: (
+  7: 2rem,
+  8: 1.5rem,
+  9: 1rem,
+  10: 0.8rem
+);
+
+$display-font-sizes: map-merge($display-font-sizes, $additional-display-font-sizes);
+
+$additional-grid-breakpoints: (
+  xxxl: 1600px,
+  giga-xl: 1800px
+);
+
+$additional-container-max-widths: (
+  xxxl: 1520px,
+  giga-xl: 1720px
+);
+
+$grid-breakpoints: map-merge($grid-breakpoints, $additional-grid-breakpoints);
+$container-max-widths: map-merge($container-max-widths, $additional-container-max-widths);
+
+$custom-theme-colors: (
+  stefano-a: palegoldenrod,
+  stefano-b: palevioletred
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+// 5. Include remainder of required parts
+@import "../../bootstrap/scss/maps";
+@import "../../bootstrap/scss/mixins";
+@import "../../bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../../bootstrap/scss/utilities";
+@import "../../bootstrap/scss/reboot";
+@import "../../bootstrap/scss/type";
+@import "../../bootstrap/scss/images";
+@import "../../bootstrap/scss/containers";
+@import "../../bootstrap/scss/grid";
+
+@import "../../bootstrap/scss/tables";
+@import "../../bootstrap/scss/forms";
+@import "../../bootstrap/scss/buttons";
+@import "../../bootstrap/scss/transitions";
+@import "../../bootstrap/scss/dropdown";
+@import "../../bootstrap/scss/button-group";
+@import "../../bootstrap/scss/nav";
+@import "../../bootstrap/scss/navbar";
+@import "../../bootstrap/scss/card";
+@import "../../bootstrap/scss/accordion";
+@import "../../bootstrap/scss/breadcrumb";
+@import "../../bootstrap/scss/pagination";
+@import "../../bootstrap/scss/badge";
+@import "../../bootstrap/scss/alert";
+@import "../../bootstrap/scss/progress";
+@import "../../bootstrap/scss/list-group";
+@import "../../bootstrap/scss/close";
+@import "../../bootstrap/scss/toasts";
+@import "../../bootstrap/scss/modal";
+@import "../../bootstrap/scss/tooltip";
+@import "../../bootstrap/scss/popover";
+@import "../../bootstrap/scss/carousel";
+@import "../../bootstrap/scss/spinners";
+@import "../../bootstrap/scss/offcanvas";
+@import "../../bootstrap/scss/placeholders";
+
+@import "../../bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../../bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
