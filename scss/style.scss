@@ -1,7 +1,60 @@
 @import "./partials/bootstrap-overrides";
+@import "./partials/mixins";
 
 // qui va il nostro stile custom
 
-.myCustomClass {
-    color: black;
+
+$body-width: 95%;
+$netflix-color: #141414;
+
+
+
+body{
+    background-color: #141414;
+    width: $body-width;
+    margin-inline: auto;
+}
+
+.logo-img {
+    max-width: 130px;
   }
+
+
+  .shows-row {
+    margin-block: 2rem;
+  }
+
+  .navbar-avatar {
+    max-width: 40px;
+  }
+
+
+.drop-nav{
+    .dropdown{
+        a{
+            button {
+                @include netflixBtnStyle(0);
+                // background-color: $netflix-color;
+                // border: 1px solid transparent
+              }
+        }
+    }
+}
+
+
+
+.right-side-nav > ul {
+    column-gap: 10px;
+  }
+
+
+.left-side-nav {
+    column-gap: 10px;
+}
+
+.genres-btn{
+    @include netflixBtnStyle(2px, 1px solid $white, black);
+  }
+// .carousel-item>img{
+//     width: calc(6/95);
+// } 

@@ -1,0 +1,7 @@
+$trans-border: 1px solid transparent;
+
+@mixin netflixBtnStyle ($radius, $border:$trans-border, $background: #141414){
+    background-color: $background;
+    border: $border;
+    border-radius: $radius;
+}

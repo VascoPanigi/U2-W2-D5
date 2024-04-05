@@ -6,17 +6,9 @@
     <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
     <title>Netflix</title>
     <style>
-      .title-container {
-        display: flex;
-      }
-
-      .shows-row {
-        margin-block: 2rem;
-      }
-
-      .logo-img {
-        max-width: 130px;
-      }
+      /* .carousel-item>img{
+        max-width: 150px;
+      } */
     </style>
   </head>
   <body data-bs-theme="dark">
@@ -41,7 +33,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="left-side-nav navbar-nav me-auto mb-2 mb-lg-0 d-flex">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
@@ -63,21 +55,72 @@
                 <a class="nav-link" aria-disabled="true">Disabled</a>
               </li>
             </ul>
-            <div class="right-side-nav">
+            <div class="right-side-nav d-flex justify-content-between">
               <ul class="navbar-nav align-items-center">
                 <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-search"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                    />
-                  </svg>
+                  <!-- AGGIUNGERE COSINO CHE CLICCHI E CERCHI -->
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-search"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="#">KIDS</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-bell-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="drop-nav">
+                  <a href="#">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          class="navbar-avatar"
+                          src="/assets/assets/avatar.png"
+                          alt="your netflix avatar"
+                        />
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >Something else here</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -87,22 +130,53 @@
     </header>
 
     <main>
-      <div class="title-container">
+      <div class="title-container d-flex align-items-center">
         <h1>TV shows</h1>
         <div class="dropdown">
           <button
-            class="btn btn-secondary dropdown-toggle"
+            class="btn btn-secondary dropdown-toggle genres-btn"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Dropdown button
+            Genres
           </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Crime</a></li>
+            <li><a class="dropdown-item" href="#">Gabibbo</a></li>
+            <li><a class="dropdown-item" href="#">Pluto</a></li>
           </ul>
+        </div>
+
+        <div class="title-buttons-container d-flex align-items-center">
+          <a href=""
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="white"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              /></svg
+          ></a>
+          <a href=""
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="white"
+              class="bi bi-grid-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z"
+              /></svg
+          ></a>
         </div>
       </div>
 
@@ -111,96 +185,96 @@
           <div class="carousel-item active d-flex">
             <img
               src="./assets/assets/media/media0.webp"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt="..."
             />
             <img
               src="./assets/assets/media/media1.jpg"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media10.jpg"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media11.jpg"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media12.jpg"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media13.jpg"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
           </div>
           <div class="carousel-item d-flex">
             <img
               src="./assets/assets/media/media14.webp"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt="..."
             />
             <img
               src="./assets/assets/media/media15.jpg"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media16.webp"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media17.jpg"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media18.jpg"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media19.webp"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
           </div>
           <div class="carousel-item d-flex">
             <img
               src="./assets/assets/media/media20.jpg"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt="..."
             />
             <img
               src="./assets/assets/media/media2.webp"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media21.webp"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media22.webp"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media23.webp"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
             <img
               src="./assets/assets/media/media24.jpg"
-              class="d-block w-100"
+              class="d-inline-block w-100"
               alt=""
             />
           </div>
@@ -248,7 +322,7 @@
   </div>
 </div> -->
     </main>
-
+    <footer></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
