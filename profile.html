@@ -23,13 +23,15 @@
       /></a>
     </head>
     <main>
-      <div class="container text-white">
+      <div class="container text-white profile-section-container">
         <div class="row">
-          <div class="col">Column</div>
-          <div class="col-9">
+          <div class="col"></div>
+          <div class="col-7">
             <div class="edit-title-container">
               <h1>Edit profile</h1>
             </div>
+            <div class="horizontal-rule"></div>
+
             <div class="profile-content-container">
               <div class="container">
                 <div class="row">
@@ -44,15 +46,16 @@
                             type="text"
                             id="disabledTextInput"
                             class="form-control"
-                            placeholder="Disabled input"
+                            placeholder="Epicode Student"
                           />
                         </div>
                       </fieldset>
                     </form>
                     <div class="dropdown-container">
-                      <h4>Language</h4>
+                      <h4>Language:</h4>
                       <div class="dropdown">
                         <button
+                          id="languages-btn"
                           class="btn btn-secondary dropdown-toggle"
                           type="button"
                           data-bs-toggle="dropdown"
@@ -89,13 +92,13 @@
                         </button>
                         <ul class="dropdown-menu">
                           <li>
-                            <a class="dropdown-item" href="#">Italiano</a>
+                            <a class="dropdown-item" href="#">oh no</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">Norsk</a>
+                            <a class="dropdown-item" href="#">aaaaa</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">Svenska</a>
+                            <a class="dropdown-item" href="#">oddiooo</a>
                           </li>
                         </ul>
                       </div>
@@ -119,7 +122,7 @@
                           id="flexCheckDefault"
                         />
                         <label class="form-check-label" for="flexCheckDefault">
-                          Default checkbox
+                          Autoplay next episode in a series on all devices
                         </label>
                       </div>
                       <div class="form-check">
@@ -130,7 +133,7 @@
                           id="flexCheckChecked"
                         />
                         <label class="form-check-label" for="flexCheckChecked">
-                          Checked checkbox
+                          Autoplay previews while browsing on all devcices
                         </label>
                       </div>
                     </div>
@@ -138,8 +141,35 @@
                 </div>
               </div>
             </div>
+            <div class="horizontal-rule"></div>
+
+            <div class="buttons-container d-flex justify-content-between">
+              <div class="col-3">
+                <button type="button" class="btn btn-dark">SAVE</button>
+              </div>
+              <div class="col-3">
+                <button type="button" class="btn btn-dark">CANCEL</button>
+              </div>
+              <button type="button" class="btn btn-dark">DELETE PROFILE</button>
+              <!-- <div class="container">
+                <div class="row">
+                  <div class="col-3">
+                    <button type="button" class="btn btn-dark">SAVE</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn btn-dark">CANCEL</button>
+                  </div>
+                  <div class="col-6">
+                    <button type="button" class="btn btn-dark bigger-btn">
+                      DELETE PROFILE
+                    </button>
+                  </div>
+                </div>
+              </div> -->
+            </div>
           </div>
-          <div class="col">Column</div>
+
+          <div class="col"></div>
         </div>
       </div>
 

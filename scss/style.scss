@@ -48,7 +48,7 @@ body{
   }
 
 
-.genres-btn{
+.genres-btn, #languages-btn{
     @include netflixBtnStyle(2px, 1px solid $white, black);
   }
 
@@ -111,7 +111,8 @@ margin-block-end: 1.5rem;
     button{
         @include netflixBtnStyle(2px, 1px solid $secondary);
         color: $secondary;
-        margin-block: 1.5rem .9rem
+        margin-block: 1.5rem .9rem;
+    
     }
 }
 
@@ -120,10 +121,68 @@ margin-block-end: 1.5rem;
     @include netflixBtnStyle(2px, 1px solid $secondary);
     color: $secondary;
     letter-spacing: 3px;
+    &:hover {
+        background-color: white;
+        color: black;
+     }
 }
 }
 
 .horizontal-rule{
-    border: 0.5px solid $secondary;
-    margin-block: 1rem;
+    border: 0.5px solid #2F2F2F;
+    margin-block: 1.5rem;
+}
+
+// .buttons-container{
+//     .container{
+//         .row{
+//             button{
+//                 @include netflixBtnStyle(2px, 1px solid $secondary);
+//                 color: $secondary;
+//                 letter-spacing: 1px;
+//                 padding-inline: 1.5rem;
+//             }
+//             .bigger-btn{
+//                 @include netflixBtnStyle(2px, 1px solid $secondary);
+//                 color: $secondary;
+//                 letter-spacing: 1px;
+//                 padding-inline: 1.5rem;
+
+//             }
+//         }
+//     }
+// }
+.buttons-container{
+    
+            button{
+                @include netflixBtnStyle(2px, 1px solid $secondary);
+                color: $secondary;
+                letter-spacing: 1px;
+                padding-inline: 1.5rem;
+                font-weight: 500;
+                &:hover {
+                    background-color: white;
+                    color: black;
+                 }
+            }
+               
+}
+
+
+#disabledTextInput{
+    background-color: $gray-800;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    &::placeholder {
+        color: white;
+    }
+}
+
+
+.profile-section-container{
+    h4{
+        font-size: 1.2rem;
+        color: $gray-500;
+        margin-block-start: 1.2rem;
+    }
 }
