@@ -10,7 +10,7 @@ $netflix-color: #141414;
 
 
 body{
-    background-color: #141414;
+    background-color: $netflix-color;
     width: $body-width;
     margin-inline: auto;
 }
@@ -97,8 +97,10 @@ body{
 
 
 .carousel-item{
+    column-gap: 5px;
+
     img{
-        max-width: 300px;
+        max-width: 280px;
     }
 }
 
@@ -184,5 +186,81 @@ margin-block-end: 1.5rem;
         font-size: 1.2rem;
         color: $gray-500;
         margin-block-start: 1.2rem;
+    }
+}
+
+
+.maturity-settings-container{
+    .dropdown{
+    button{
+        @include netflixBtnStyle(2px, 1px solid transparent, $gray-800);
+        color: white;
+        margin-block: 1rem;
+    }
+}
+}
+
+.profile-img-container > img {
+    max-width: 80%;
+  }
+
+
+.autoplay-controls-container{
+    label{
+        font-size: .9rem;
+    }
+}
+
+
+.form-check-input{
+    box-shadow: none;
+border: 1px solid $gray-800;
+border-radius: 1px;
+padding:15px;
+margin-inline-end: 15px;
+    &:checked{
+        box-shadow: none;
+        border: 1px solid $gray-800;
+    }
+    &:focus{
+        box-shadow: none;
+        border: 1px solid $gray-800;
+    }
+    &:active{
+        box-shadow: none;
+        border: 1px solid $gray-800;
+    }
+}
+
+.form-check:nth-of-type(1){
+    margin-block-end: .3rem;
+}
+
+.edit-title-container{
+    h1{
+        font:{
+            size: 3rem;
+            weight: 400;
+        }
+        margin-bottom: -20px;
+    }
+}
+
+
+.pencil-container{
+    position: relative;
+    top: -32px;
+    right: -5px;
+    border-radius: 50%;
+    padding-block: 0;
+    padding-inline: 7px;
+    background-color: black;
+    border: 1px solid white;
+}
+
+
+.carousel-item{
+    .container{
+        max-width: 100%;
     }
 }
