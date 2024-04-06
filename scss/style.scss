@@ -31,13 +31,13 @@ body{
 
 .drop-nav{
     .dropdown{
-        a{
+        
             button {
                 @include netflixBtnStyle(0);
                 // background-color: $netflix-color;
                 // border: 1px solid transparent
               }
-        }
+        
     }
 }
 
@@ -48,13 +48,82 @@ body{
   }
 
 
-.left-side-nav {
-    column-gap: 10px;
-}
-
 .genres-btn{
     @include netflixBtnStyle(2px, 1px solid $white, black);
   }
-// .carousel-item>img{
-//     width: calc(6/95);
-// } 
+
+
+.title-buttons-container{
+    .icon-container{
+        padding-block: 0 3px;
+        padding-inline: 10px;
+        border: 1px solid $secondary;
+        &:hover {
+            border: 1px solid white;
+         }
+    }
+}
+
+.title-container{
+    margin-block: 1.5rem;
+    .category-container{
+        column-gap: 2.4rem;
+        h1{
+            font-size: 2.2rem;
+        }
+    }
+}
+
+#navbarSupportedContent{
+    .left-side-nav{
+        column-gap: 6px;
+        .nav-item{
+            a{
+    font-size: .85rem;
+}
+        }
+    }
+}
+
+
+.carousel-container{
+    .carousel-title{
+        h3{
+            font-size: 1.6rem;
+            margin-block: 2rem 1.5rem;
+        }
+    }
+}
+
+
+.carousel-item{
+    img{
+        max-width: 300px;
+    }
+}
+
+.social-list{
+margin-inline-start: -1rem;
+margin-block-end: 1.5rem;
+}
+
+.utility-container{
+    button{
+        @include netflixBtnStyle(2px, 1px solid $secondary);
+        color: $secondary;
+        margin-block: 1.5rem .9rem
+    }
+}
+
+.profile-content-container{
+    .btn-dark{
+    @include netflixBtnStyle(2px, 1px solid $secondary);
+    color: $secondary;
+    letter-spacing: 3px;
+}
+}
+
+.horizontal-rule{
+    border: 0.5px solid $secondary;
+    margin-block: 1rem;
+}

@@ -731,7 +731,7 @@ progress {
 .container-lg,
 .container-md,
 .container-sm {
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 0.25rem;
   --bs-gutter-y: 0;
   width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
@@ -775,7 +775,7 @@ progress {
 }
 
 .row {
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 0.25rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -4347,7 +4347,7 @@ textarea.form-control-lg {
   --bs-card-color: ;
   --bs-card-bg: var(--bs-body-bg);
   --bs-card-img-overlay-padding: 1rem;
-  --bs-card-group-margin: 0.75rem;
+  --bs-card-group-margin: 0.125rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -5355,7 +5355,7 @@ textarea.form-control-lg {
   --bs-toast-zindex: 1090;
   --bs-toast-padding-x: 0.75rem;
   --bs-toast-padding-y: 0.5rem;
-  --bs-toast-spacing: 1.5rem;
+  --bs-toast-spacing: 0.25rem;
   --bs-toast-max-width: 350px;
   --bs-toast-font-size: 0.875rem;
   --bs-toast-color: ;
@@ -11978,7 +11978,7 @@ body {
   max-width: 40px;
 }
 
-.drop-nav .dropdown a button {
+.drop-nav .dropdown button {
   background-color: #141414;
   border: 1px solid transparent;
   border-radius: 0;
@@ -11989,13 +11989,71 @@ body {
        column-gap: 10px;
 }
 
-.left-side-nav {
-  -moz-column-gap: 10px;
-       column-gap: 10px;
-}
-
 .genres-btn {
   background-color: black;
   border: 1px solid #fff;
   border-radius: 2px;
+}
+
+.title-buttons-container .icon-container {
+  padding-block: 0 3px;
+  padding-inline: 10px;
+  border: 1px solid #6c757d;
+}
+.title-buttons-container .icon-container:hover {
+  border: 1px solid white;
+}
+
+.title-container {
+  margin-block: 1.5rem;
+}
+.title-container .category-container {
+  -moz-column-gap: 2.4rem;
+       column-gap: 2.4rem;
+}
+.title-container .category-container h1, .title-container .category-container .h1 {
+  font-size: 2.2rem;
+}
+
+#navbarSupportedContent .left-side-nav {
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+}
+#navbarSupportedContent .left-side-nav .nav-item a {
+  font-size: 0.85rem;
+}
+
+.carousel-container .carousel-title h3, .carousel-container .carousel-title .h3 {
+  font-size: 1.6rem;
+  margin-block: 2rem 1.5rem;
+}
+
+.carousel-item img {
+  max-width: 300px;
+}
+
+.social-list {
+  margin-inline-start: -1rem;
+  margin-block-end: 1.5rem;
+}
+
+.utility-container button {
+  background-color: #141414;
+  border: 1px solid #6c757d;
+  border-radius: 2px;
+  color: #6c757d;
+  margin-block: 1.5rem 0.9rem;
+}
+
+.profile-content-container .btn-dark {
+  background-color: #141414;
+  border: 1px solid #6c757d;
+  border-radius: 2px;
+  color: #6c757d;
+  letter-spacing: 3px;
+}
+
+.horizontal-rule {
+  border: 0.5px solid #6c757d;
+  margin-block: 1rem;
 }/*# sourceMappingURL=style.css.map */
