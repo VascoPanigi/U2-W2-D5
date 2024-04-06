@@ -12157,4 +12157,12 @@ body {
 
 .carousel-item .container {
   max-width: 100%;
+}
+
+#account-body {
+  background-color: #F3F3F3;
+}
+
+#account-header {
+  background-color: #141414;
 }/*# sourceMappingURL=style.css.map */
